@@ -98,9 +98,11 @@ class CountryCodeList extends React.Component {
     if (this.props.renderSectionItem) {
       return this.props.renderSectionItem(rowData)
     }
-    return (
+    /*return (
       <Text style={[styles.sectionItemText, this.props.sectionItemTextStyle]}>{rowData.title}</Text>
-    )
+    )*/
+
+    return null;
   }
 
   renderCell(rowData){
