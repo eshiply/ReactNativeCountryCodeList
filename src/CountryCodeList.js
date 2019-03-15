@@ -25,8 +25,13 @@ class CountryCodeList extends React.Component {
   }
 
   render(){
+    const {containerStyle} = this.props;
+    const containerBase = [styles.container]
+    if (this.props.containerStyle !== undefined){
+      containerBase.push(containerStyle);
+    }
     return (
-      <View style={styles.container}>
+      <View style={containerBase}>
         <Search
           afterCancel={this.clearQuery}
           afterDelete={this.clearQuery}
